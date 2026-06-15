@@ -13,19 +13,6 @@ LapMCP23017::LapMCP23017(uint8_t address) {
   _wire = &Wire;
 }
 
-/*
- * Constructors
- */
-LapMCP23017::LapMCP23017() {
-  _addr = 0x20;
-  _wire = &Wire;
-}
-
-LapMCP23017::LapMCP23017(uint8_t address) {
-  _addr = address;
-  _wire = &Wire;
-}
-
 LapMCP23017::LapMCP23017(TwoWire *wire) {
   _addr = 0x20;
   _wire = wire;
