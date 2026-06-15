@@ -1,4 +1,6 @@
-LapMCP23017 is a simple library to drive the MCP23017 I2C I/O expander chip.
+LapMCP23017 is a simple library to support the MCP23017 I2C I/O expander chip. It enables bit by bit access to reading and writing, through **digitalRead()**
+and **digitalWrite()**, bytewise access to a whole MCP23017 port with **read()** and **write()**, and 16-bit read and writes with **read16()** and **write16()**.
+Likewise it has **pinMode()** to set the mode of a pin, and **portMode()** to set the mode of a port, and **port16Mode()** to set the mode of all 16 I/O pins.
 
 The constructors are:
 
