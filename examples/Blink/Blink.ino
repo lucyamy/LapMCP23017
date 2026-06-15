@@ -22,7 +22,7 @@
 #define ADDRESS 0x20
 #define LED 0
 
-LapMCP23017 io = LapMCP23017(ADDRESS);
+LapMCP23017 io(ADDRESS);
 
 // the setup function runs once when you press reset or power the board
 void setup() {
