@@ -16,24 +16,21 @@
 
 class LapMCP23017 {
 public:
-	LapMCP23017();
-	LapMCP23017(uint8_t);
-	LapMCP23017(uint8_t, TwoWire *);
-	void begin();
-	void pinMode(uint8_t, uint8_t);
-    void portMode(uint8_t, uint8_t, uint8_t);
-    void portMode16(uint16_t, uint16_t);
-	uint8_t digitalRead(uint8_t);
-	void digitalWrite(uint8_t, uint8_t);
-	uint8_t read(uint8_t);
-	void write(uint8_t, uint8_t);
-	uint16_t read16();
-	void write16(uint16_t);
+  LapMCP23017();
+  LapMCP23017(uint8_t);
+  LapMCP23017(uint8_t, TwoWire *);
+  void begin();
+  void pinMode(uint8_t, uint8_t);
+  void portMode(uint16_t, uint16_t);
+  uint8_t digitalRead(uint8_t);
+  void digitalWrite(uint8_t, uint8_t);
+  uint16_t read();
+  void write(uint16_t);
 
 private:
-	TwoWire* _wire;
-	uint8_t _addr;
-	void writeReg(uint8_t, uint8_t);
-	uint8_t readReg(uint8_t);
+  TwoWire* _wire;
+  uint8_t _addr;
+  void writeReg(uint8_t, uint8_t);
+  uint8_t readReg(uint8_t);
 };
 #endif
