@@ -13,6 +13,11 @@ LapMCP23017::LapMCP23017(uint8_t address) {
   _wire = &Wire;
 }
 
+LapMCP23017::LapMCP23017(TwoWire *wire) {
+  _addr = 0x20;
+  _wire = wire;
+}
+
 LapMCP23017::LapMCP23017(uint8_t address, TwoWire *wire) {
   _addr = address;
   _wire = wire;
