@@ -31,7 +31,7 @@ public:
 private:
   TwoWire* _wire;
   uint8_t _addr;
-  void writeReg(uint8_t, uint8_t);
-  uint8_t readReg(uint8_t);
+  uint8_t _read(uint8_t);
+  void _write(uint8_t, uint8_t);
 };
 #endif
