@@ -36,7 +36,7 @@ This is equivalent to the standard Arduino digitalRead() function. *pin* is 0-15
 ###	void digitalWrite(uint8_t pin, uint8_t value);
 This is equivalent to the standard Arduino digitalWrite() function. *pin* is 0-15.
 
-###	uint16_t rea6();
+###	uint16_t read();
 This reads a 16-bit value. The low byte is read from port A, and the high byte from Port B.
 
 ###	void write(uint16_t value);
