@@ -21,7 +21,7 @@
 */
 #include <LapMCP23017.h>
 
-LapMCP23017 io = LapMCP23017(ADDRESS);
+LapMCP23017 io(ADDRESS);
 
 void setup() {
   io.begin();
