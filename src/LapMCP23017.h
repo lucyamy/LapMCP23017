@@ -18,6 +18,7 @@ class LapMCP23017 {
 public:
   LapMCP23017();
   LapMCP23017(uint8_t);
+  LapMCP23017(TwoWire *);
   LapMCP23017(uint8_t, TwoWire *);
   void begin();
   void pinMode(uint8_t, uint8_t);
