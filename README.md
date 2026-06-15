@@ -14,7 +14,7 @@ This will use the specified I2C address, and will use the specified I2C interfac
 The functions are:
 
 ###	void begin();
-This initialises the LapMCP23017 driver. All pins are set to be inputs.
+This initialises the LapMCP23017 driver. All pins are set to be inputs. It can be called at any time to reset everything.
 
 ###	void pinMode(uint8_t pin, uint8_t mode);
 This is equivalent to the standard Arduino pinMode() function. *pin* is 0-15.
