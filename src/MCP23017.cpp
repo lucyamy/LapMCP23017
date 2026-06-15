@@ -11,7 +11,7 @@ LapMCP23017::LapMCP23017() {
 LapMCP23017::LapMCP23017(uint8_t address) {
   _addr = address;
   _wire = &Wire;
-}#include "LapMCP23017.h"
+}
 
 /*
  * Constructors
