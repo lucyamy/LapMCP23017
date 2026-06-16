@@ -29,12 +29,13 @@ LapMCP23017::LapMCP23017(uint8_t address, TwoWire *wire) {
 
 void LapMCP23017::begin() {
   _write(IOCON, 0x20);
-  _write(GPPU_A, 0xFF);
-  _write(GPPU_B, 0xFF);
-  _write(IPOL_A, 0);
-  _write(IPOL_B, 1);
+  _write(IODIR_A, 0xFF);
+  _write(IODIR_B, 0xFF);
+  _write(GPPU_A, 0x00);
+  _write(GPPU_B, 0x00);
+  _write(IPOL_A, 0x00);
+  _write(IPOL_B, 0x00);
 }
-
 
 void LapMCP23017::portMode(uint16_t dir, uint16_t pullup) {
   _write(IODIR_A, lowByte(dir));
