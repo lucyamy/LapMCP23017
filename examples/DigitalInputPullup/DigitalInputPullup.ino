@@ -5,8 +5,8 @@
   input on pin 2 and prints the results to the Serial Monitor.
 
   The circuit:
-  - momentary switch attached from pin 2 to ground
-  - LED on pin 13 through a 470+ ohm resistor to ground
+  - momentary switch attached from pin 2 to ground - thst's pin 24 (GPA3) of the MCP23017 chip.
+  - LED on pin 13 through a 470+ ohm resistor to ground - thst's pin 6 (GPB5) of the MCP23017 chip.
 
   Unlike pinMode(INPUT), there is no pull-down resistor necessary. An internal
   20K-ohm resistor is pulled to 5V. This configuration causes the input to read
