@@ -21,6 +21,8 @@
 */
 #include <LapMCP23017.h>
 
+#define ADDRESS 0x20
+
 LapMCP23017 io(ADDRESS);
 
 void setup() {
