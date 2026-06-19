@@ -26,11 +26,12 @@ This initialises the LapMCP23017 driver. All pins are set to be inputs. It can b
 ###	void pinMode(uint8_t pin, uint8_t mode);
 This is equivalent to the standard Arduino pinMode() function. *pin* is 0-127.
 
-###  void portMode(uint16_t direction, uint16_t pullup, uint8_t chip);
-**portMode** is like **pinMode**, but it sets the mode for all 16 bits. The *direction* parameter sets each pin to input or output. A 1 in a bit
+###  void portMode(uint8_t chip, uint16_t direction, uint16_t pullup);
+**portMode** is like **pinMode**, but it sets the mode for all 16 bits.
+The **chip** argument is a chip number, from 0 to 7; 0 if you are only using 1 chip.
+The *direction* parameter sets each pin to input or output. A 1 in a bit
 position sets that pin to be an input, a 0 sets it to be an output.
 The *pullup* parameter turns pullup on or off. A 1 in a bit position sets that pin to have pullup, a 0 sets it to not have pullup.
-The **chip** argument is a chip number, from 0 to 7; 0 if you are only using 1 chip.
 
 ###	uint8_t digitalRead(uint8_t pin);
 This is equivalent to the standard Arduino digitalRead() function. *pin* is 0-127.
