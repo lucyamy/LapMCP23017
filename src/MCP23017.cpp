@@ -117,7 +117,7 @@ void LapMCP23017::begin() {
   i--;
 }
 
-void LapMCP23017::portMode(uint16_t dir, uint16_t pullup, uint8_t chip) {
+void LapMCP23017::portMode(uint8_t chip, uint16_t dir, uint16_t pullup) {
   _write(IODRA, lowByte(dir), _addr[chip]);
   _write(IODRB, highByte(dir), _addr[chip]);
   _write(GPPUA, lowByte(pullup), _addr[chip]);
