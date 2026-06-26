@@ -101,6 +101,14 @@ LapMCP23017::LapMCP23017(uint8_t address, TwoWire *wire) {
  * Public
  */
 
+void LapMCP23017::begin(uint8_t pin) {
+  pinMode(pin, OUTPUT);
+  digitalWrite(pin, LOW);
+  delayMicroseconds(100);
+  digitalWrite(pin, HIGH);
+  begin();
+}
+
 void LapMCP23017::begin() {
   int i = _count;
   uint8_t addr;
@@ -113,8 +121,8 @@ void LapMCP23017::begin() {
     _write(GPPUB, 0x00, addr);
     _write(IPOLA, 0x00, addr);
     _write(IPOLB, 0x00, addr);
+    i--;
   }
-  i--;
 }
 
 void LapMCP23017::portMode(uint8_t chip, uint16_t dir, uint16_t pullup) {
